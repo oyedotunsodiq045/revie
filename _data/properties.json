@@ -1,0 +1,49 @@
+[{
+    "_id": "5d713995b721c3bb38c1f5d0",
+    "user": "5d7a514b5d2c12c7449be045",
+    "owner": "Sujimoto Construction",
+    "description": "Ultimately, Quality is our business and our model is entangled with the definition of Diligence.On a quest for excellence and dedicated to spurring a change. The mission is to diligently redefine luxury living not only to simply satisfy our clients but also to go the extra mile and delight them with high quality and glamorous edifices.",
+    "website": "https://sujimotonig.com",
+    "phone": "234-907-000-20-06",
+    "email": "sales@sujimotonig.com",
+    "address": "14b Milverton Rd, Ikoyi, Lagos",
+    "listings": ["Duplex", "Apartment", "Penthouse"],
+    "averageCost": 10000
+  },
+  {
+    "_id": "5d713a66ec8f2b88b8f830b8",
+    "user": "5d7a514b5d2c12c7449be046",
+    "owner": "Kuba Developers",
+    "description": "It takes a master-vision to create a masterpiece. The prestigious location of Ikoyi, Lagos, deserves an elegant tower with a striking facade, well appointed services and feature rich residences. With this vision The Belmonte is envisaged to set a new hallmark for a sophisticated urban living. With a choice of spacious luxury apartments, lavish duplexes and presidential penthouses right on Bourdillon Road, living in The Belmonte is as exclusive as it gets.",
+    "website": "https://www.belmontenigeria.com",
+    "phone": "234-907-000-20-06",
+    "email": "sales@belmontenigeria.com",
+    "address": "Kuber Developers Ltd.,50A, Glover Road, Ikoyi, Lagos, Nigeria",
+    "listings": ["Duplex", "Apartment", "Penthouse"],
+    "averageCost": 12000
+  },
+  {
+    "_id": "5d725a037b292f5f8ceff787",
+    "user": "5c8a1d5b0190b214360dc031",
+    "owner": "Brookstone",
+    "description": "Brookstone is a full service real estate development company. We specialize in the entire lifecycle of a real estate project commencing with site acquisition, conceptualization, leasing/sales, securing financing and construction management to delivery and facilities management. We leverage 25+ years of management experience to deliver best in class development services within our projects. Our principals’ track record includes residential, commercial and retail across various markets in Nigeria valued at over $400M. We use a yield driven approach to achieve a development’s highest and best use. At Brookstone, our focus is maximizing shareholder value while achieving unparalleled client satisfaction.",
+    "website": "http://brookstone-property.com/",
+    "phone": "+234(0)9099999416",
+    "email": "sales@brookstone.com",
+    "address": "3 Okotie Eboh Street, S.W. Ikoyi, Lagos",
+    "listings": ["Duplex", "Apartment", "Penthouse"],
+    "averageCost": 8000
+  },
+  {
+    "_id": "5d725a1b7b292f5f8ceff788",
+    "user": "5c8a1d5b0190b214360dc032",
+    "owner": "J.S. Realty",
+    "description": "J.S. Realty was founded in 2005 and today is one of the leading real estate firms in Nigeria. Our goal has been the same since the beginning: to be an innovative company with a commitment to improve quality of living by providing outstanding real estate opportunities. Today the J.S. Realty portfolio spans over 6.5 million square feet of real estate, and reflects the aspirations of a broad range of property buyers, encompassing medium to large-scale developments, mixed use schemes, waterfront developments and golf estates. We focus on providing exceptional real estate in premium locations in Lagos and a few other cities. We work together with world-class architects and developers to create high quality real estate that make lasting impact on the landscape of our communities.",
+    "website": "https://www.jsrealtyonline.com/",
+    "phone": "+234017944949",
+    "email": "sales@jsrealty.com",
+    "address": "90 Raymond Njoku Street, S.W. Ikoyi, Lagos, Nigeria",
+    "listings": ["Duplex", "Apartment", "Penthouse"],
+    "averageCost": 5000
+  }
+]
