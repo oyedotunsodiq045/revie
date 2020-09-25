@@ -26,7 +26,7 @@ node seeder -d
 
 ### Testing
 
-| Routes &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Description       |
+| Routes                                                                      | Description                 |
 | --------------------------------------------------------------------------- | --------------------------- |
 | Authentication                                                              |                             |
 | POST &nbsp; &nbsp; &nbsp; api/v1/auth/register                              | Register a user             |
