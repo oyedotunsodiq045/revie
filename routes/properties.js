@@ -9,12 +9,12 @@ const {
 } = require('../controllers/properties');
 
 // Include other resource routers
-// const apartmentRouter = require('./apartments');
+const apartmentRouter = require('./apartments');
 
 const router = express.Router();
 
 // Re-route into other resource routers
-// router.use('/:propertyId/apartments', apartmentRouter);
+router.use('/:propertyId/apartments', apartmentRouter);
 
 router
   .route('/radius/:zipcode/:distance')

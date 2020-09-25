@@ -10,13 +10,13 @@ dotenv.config({
 
 // Load models
 const Property = require('./models/Property');
-// const Apartment = require('./models/Apartment');
+const Apartment = require('./models/Apartment');
 const User = require('./models/User');
 // // const Review = require('./models/Review');
 
 // Connect to DB
-mongoose.connect(process.env.MONGO_URI, {
-  // mongoose.connect(process.env.LOCAL_MONGO_URI, {
+// mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect(process.env.LOCAL_MONGO_URI, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: false,
@@ -28,9 +28,9 @@ const properties = JSON.parse(
   fs.readFileSync(`${__dirname}/_data/properties.json`, 'utf-8')
 );
 
-// const apartments = JSON.parse(
-//   fs.readFileSync(`${__dirname}/_data/apartments.json`, 'utf-8')
-// );
+const apartments = JSON.parse(
+  fs.readFileSync(`${__dirname}/_data/apartments.json`, 'utf-8')
+);
 
 const users = JSON.parse(
   fs.readFileSync(`${__dirname}/_data/users.json`, 'utf-8')
@@ -59,7 +59,7 @@ const importData = async () => {
 const deleteData = async () => {
   try {
     await Property.deleteMany();
-    // await Apartment.deleteMany();
+    await Apartment.deleteMany();
     await User.deleteMany();
     // await Review.deleteMany();
 

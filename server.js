@@ -8,7 +8,7 @@ const connectDB = require('./config/db');
 
 // Route files
 const properties = require('./routes/properties');
-// const apartments = require('./routes/apartments');
+const apartments = require('./routes/apartments');
 const auth = require('./routes/auth');
 // const reviews = require('./routes/reviews');
 
@@ -35,7 +35,7 @@ if (process.env.NODE_ENV == 'development') {
 
 // Mount routers
 app.use('/api/v1/properties', properties);
-// app.use('/api/v1/apartments', apartments);
+app.use('/api/v1/apartments', apartments);
 app.use('/api/v1/auth', auth);
 // app.use('/api/v1/reviews', reviews);
 

@@ -61,12 +61,14 @@ const PropertySchema = new Schema({
     type: [String],
     required: true,
     enum: [
+      'Detached',
       'Duplex',
+      'Triplex',
       'Apartment',
       'Penthouse',
-      'Club',
-      'Plaza',
-      'Park',
+      'Bungalow',
+      'Mansion',
+      'Skyscraper',
       'Other'
     ]
   },
@@ -83,6 +85,13 @@ const PropertySchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now
+  }
+}, {
+  toJSON: {
+    virtuals: true
+  },
+  toObject: {
+    virtuals: true
   }
 });
 
@@ -111,6 +120,23 @@ PropertySchema.pre('save', async function (next) {
   // Do not save address in DB
   this.address = undefined;
   next();
+});
+
+// Cascade delete apartment when a property is deleted
+PropertySchema.pre('remove', async function (next) {
+  console.log(`Apartments being removed from property ${this._id}`);
+  await this.model('Apartment').deleteMany({
+    property: this._id
+  });
+  next();
+});
+
+// Reverse populate with virtuals
+PropertySchema.virtual('apartments', {
+  ref: 'Apartment',
+  localField: '_id',
+  foreignField: 'property',
+  justOne: false
 });
 
 module.exports = mongoose.model('Property', PropertySchema);

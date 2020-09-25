@@ -7,8 +7,7 @@
     "phone": "234-907-000-20-06",
     "email": "sales@sujimotonig.com",
     "address": "14b Milverton Rd, Ikoyi, Lagos",
-    "listings": ["Duplex", "Apartment", "Penthouse"],
-    "averageCost": 10000
+    "listings": ["Duplex", "Apartment", "Penthouse"]
   },
   {
     "_id": "5d713a66ec8f2b88b8f830b8",
@@ -19,8 +18,7 @@
     "phone": "234-907-000-20-06",
     "email": "sales@belmontenigeria.com",
     "address": "Kuber Developers Ltd.,50A, Glover Road, Ikoyi, Lagos, Nigeria",
-    "listings": ["Duplex", "Apartment", "Penthouse"],
-    "averageCost": 12000
+    "listings": ["Duplex", "Apartment", "Penthouse"]
   },
   {
     "_id": "5d725a037b292f5f8ceff787",
@@ -31,8 +29,7 @@
     "phone": "+234(0)9099999416",
     "email": "sales@brookstone.com",
     "address": "3 Okotie Eboh Street, S.W. Ikoyi, Lagos",
-    "listings": ["Duplex", "Apartment", "Penthouse"],
-    "averageCost": 8000
+    "listings": ["Duplex", "Apartment", "Penthouse"]
   },
   {
     "_id": "5d725a1b7b292f5f8ceff788",
@@ -43,7 +40,6 @@
     "phone": "+234017944949",
     "email": "sales@jsrealty.com",
     "address": "90 Raymond Njoku Street, S.W. Ikoyi, Lagos, Nigeria",
-    "listings": ["Duplex", "Apartment", "Penthouse"],
-    "averageCost": 5000
+    "listings": ["Duplex", "Apartment", "Penthouse"]
   }
 ]
