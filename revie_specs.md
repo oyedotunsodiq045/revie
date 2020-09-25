@@ -1,6 +1,6 @@
 # Revie Backend API Specifications
 
-Create the backend for a property listing website. All of the functionality below has been fully implmented in this project.
+Create the backend for a property/apartments website. All of the functionality below has been fully implmented in this project.
 
 ### Properties
 
