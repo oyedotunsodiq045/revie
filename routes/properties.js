@@ -9,6 +9,9 @@ const {
   propertyPhotoUpload
 } = require('../controllers/properties');
 
+const Property = require('../models/Property');
+const advancedResults = require('../middleware/advancedResults');
+
 // Include other resource routers
 const apartmentRouter = require('./apartments');
 
@@ -27,7 +30,7 @@ router
 
 router
   .route('/')
-  .get(getProperties)
+  .get(advancedResults(Property, 'apartments'), getProperties)
   .post(createProperty);
 
 router

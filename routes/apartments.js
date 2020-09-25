@@ -8,6 +8,9 @@ const {
   apartmentPhotoUpload
 } = require('../controllers/apartments');
 
+const Apartment = require('../models/Apartment');
+const advancedResults = require('../middleware/advancedResults');
+
 const router = express.Router({
   mergeParams: true
 });
@@ -18,7 +21,11 @@ router
 
 router
   .route('/')
-  .get(getApartments)
+  .get(advancedResults(Apartment, {
+      path: 'property',
+      select: 'owner description phone email location'
+    }),
+    getApartments)
   .post(createApartment);
 
 router

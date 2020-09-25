@@ -9,26 +9,19 @@ const Property = require('../models/Property');
 // @route   GET /api/v1/properties/:propertyId/apartments
 // @access  Public
 exports.getApartments = asyncHandler(async (req, res, next) => {
-  let query;
-
   if (req.params.propertyId) {
-    query = Apartment.find({
+    const apartments = await Apartment.find({
       property: req.params.propertyId
     });
-  } else {
-    query = Apartment.find().populate({
-      path: 'property',
-      select: 'owner description'
+
+    return res.status(200).json({
+      success: true,
+      count: apartments.length,
+      data: apartments
     });
+  } else {
+    res.status(200).json(res.advancedResults)
   }
-
-  const apartments = await query;
-
-  res.status(200).json({
-    success: true,
-    count: apartments.length,
-    data: apartments
-  });
 });
 
 // @desc    Get single Apartment
