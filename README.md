@@ -47,7 +47,7 @@ node seeder -d
 | GET &nbsp; &nbsp; &nbsp; &nbsp; api/v1/apartments/:id                       | Get Single Apartment        |
 | PUT &nbsp; &nbsp; &nbsp; &nbsp; api/v1/apartments/:id                       | Update Apartment            |
 | DELETE &nbsp;api/v1/apartments/:id                                          | Delete Apartment            |
-| PUT &nbsp; &nbsp; &nbsp; api/v1/apartments/:id/photo                        | Upload Photo                |
+| PUT &nbsp; &nbsp; &nbsp; &nbsp; api/v1/apartments/:id/photo                        | Upload Photo                |
 |                                                                             |                             |
 | Reviews                                                                     |                             |
 |                                                                             |                             |
