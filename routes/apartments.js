@@ -4,12 +4,17 @@ const {
   getApartment,
   createApartment,
   updateApartment,
-  deleteApartment
+  deleteApartment,
+  apartmentPhotoUpload
 } = require('../controllers/apartments');
 
 const router = express.Router({
   mergeParams: true
 });
+
+router
+  .route('/:id/photo')
+  .put(apartmentPhotoUpload);
 
 router
   .route('/')

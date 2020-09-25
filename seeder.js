@@ -44,7 +44,7 @@ const users = JSON.parse(
 const importData = async () => {
   try {
     await Property.create(properties);
-    // await Apartment.create(apartments);
+    await Apartment.create(apartments);
     await User.create(users);
     // await Review.create(reviews);
 

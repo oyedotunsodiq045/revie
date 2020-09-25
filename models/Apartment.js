@@ -72,6 +72,10 @@ const ApartmentSchema = new Schema({
     type: Boolean,
     default: false
   },
+  photo: {
+    type: String,
+    default: 'no-photo.jpg'
+  },
   createdAt: {
     type: Date,
     default: Date.now
@@ -85,7 +89,7 @@ const ApartmentSchema = new Schema({
 
 // Static method to get avg of apartment price
 ApartmentSchema.statics.getAverageCost = async function (propertyId) {
-  console.log('Calculating avg cost...'.blue);
+  // console.log('Calculating avg cost...'.blue);
   const obj = await this.aggregate([{
       $match: {
         property: propertyId

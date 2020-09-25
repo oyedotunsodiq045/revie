@@ -1,3 +1,4 @@
+const path = require('path');
 const ErrorResponse = require('../utils/errorResponse');
 const asyncHandler = require('../middleware/async');
 const Apartment = require('../models/Apartment');
@@ -115,5 +116,60 @@ exports.deleteApartment = asyncHandler(async (req, res, next) => {
   res.status(200).json({
     success: true,
     data: {}
+  });
+});
+
+// @desc    Upload photo for Apartment
+// @route   DELETE /api/v1/apartments/:id/photo
+// @access  Private
+exports.apartmentPhotoUpload = asyncHandler(async (req, res, next) => {
+  const apartment = await Apartment.findById(req.params.id);
+
+  if (!apartment) {
+    return next(
+      new ErrorResponse(`Apartment not found with id of ${req.params.id}`, 404)
+    );
+  }
+  if (!req.files) {
+    return next(
+      new ErrorResponse(`Please uplaod a file`, 400)
+    );
+  }
+
+  const file = req.files.file;
+
+  // Make sure the image is a photo
+  if (!file.mimetype.startsWith('image')) {
+    return next(
+      new ErrorResponse(`Please uplaod an image less than ${process.env.MAX_FILE_UPLOAD}`, 400)
+    );
+  }
+
+  // Check filesize
+  if (file.size > process.env.MAX_FILE_UPLOAD) {
+    return next(
+      new ErrorResponse(`Please uplaod a file`, 400)
+    );
+  }
+
+  // Create custom filename
+  file.name = `photo_${apartment._id}${path.parse(file.name).ext}`;
+
+  file.mv(`${process.env.FILE_UPLOAD_PATH}/${file.name}`, async err => {
+    if (err) {
+      console.error(err);
+      return next(
+        new ErrorResponse(`Please with file upload`, 500)
+      );
+    }
+
+    await Apartment.findByIdAndUpdate(req.params.id, {
+      photo: file.name
+    });
+  })
+
+  res.status(200).json({
+    success: true,
+    data: file.name
   });
 });

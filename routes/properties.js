@@ -5,7 +5,8 @@ const {
   createProperty,
   updateProperty,
   deleteProperty,
-  getPropertiesInRadius
+  getPropertiesInRadius,
+  propertyPhotoUpload
 } = require('../controllers/properties');
 
 // Include other resource routers
@@ -19,6 +20,10 @@ router.use('/:propertyId/apartments', apartmentRouter);
 router
   .route('/radius/:zipcode/:distance')
   .get(getPropertiesInRadius);
+
+router
+  .route('/:id/photo')
+  .put(propertyPhotoUpload);
 
 router
   .route('/')
