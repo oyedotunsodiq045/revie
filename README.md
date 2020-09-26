@@ -26,29 +26,31 @@ node seeder -d
 
 ### Testing
 
-| Routes                                                                      | Description                 |
-| --------------------------------------------------------------------------- | --------------------------- |
-| Authentication                                                              |                             |
-| POST &nbsp; &nbsp; &nbsp; api/v1/auth/register                              | Register a user             |
-|                                                                             |                             |
-| Properties                                                                  |                             |
-| POST &nbsp; &nbsp; &nbsp; api/v1/properties                                 | Create New Property         |
-| GET &nbsp; &nbsp; &nbsp; &nbsp; api/v1/properties                           | Get All Properties          |
-| GET &nbsp; &nbsp; &nbsp; &nbsp; api/v1/properties/radius/:zipcode/:distance | Get Properties By Distance  |
-| GET &nbsp; &nbsp; &nbsp; &nbsp; api/v1/properties/:id                       | Get Single Property         |
-| PUT &nbsp; &nbsp; &nbsp; &nbsp; api/v1/properties/:id                       | Update Property             |
-| DELETE &nbsp;api/v1/properties/:id                                          | Delete Property             |
-| PUT &nbsp; &nbsp; &nbsp; &nbsp; api/v1/properties/:id/photo                 | Upload Photo                |
-|                                                                             |                             |
-| Apartments                                                                  |                             |
-| POST &nbsp; &nbsp; &nbsp; api/v1/properties/propertyId/apartments           | Create Property Apartment   |
-| GET &nbsp; &nbsp; &nbsp; &nbsp; api/v1/apartments                           | Get All Apartments          |
-| GET &nbsp; &nbsp; &nbsp; &nbsp; api/v1/properties/propertyId/apartments     | Get Apartments For Property |
-| GET &nbsp; &nbsp; &nbsp; &nbsp; api/v1/apartments/:id                       | Get Single Apartment        |
-| PUT &nbsp; &nbsp; &nbsp; &nbsp; api/v1/apartments/:id                       | Update Apartment            |
-| DELETE &nbsp;api/v1/apartments/:id                                          | Delete Apartment            |
-| PUT &nbsp; &nbsp; &nbsp; &nbsp; api/v1/apartments/:id/photo                        | Upload Photo                |
-|                                                                             |                             |
-| Reviews                                                                     |                             |
-|                                                                             |                             |
-| Users                                                                       |                             |
+| Routes                                                                          | Description                 |
+| ------------------------------------------------------------------------------- | --------------------------- |
+| URL &nbsp; &nbsp; &nbsp; &nbsp; https://revie.glitch.me                         |                             |
+|                                                                                 |                             |
+| Authentication                                                                  |                             |
+| POST &nbsp; &nbsp; &nbsp; url/api/v1/auth/register                              | Register a user             |
+|                                                                                 |                             |
+| Properties                                                                      |                             |
+| POST &nbsp; &nbsp; &nbsp; url/api/v1/properties                                 | Create New Property         |
+| GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/properties                           | Get All Properties          |
+| GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/properties/radius/:zipcode/:distance | Get Properties By Distance  |
+| GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/properties/:id                       | Get Single Property         |
+| PUT &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/properties/:id                       | Update Property             |
+| DELETE &nbsp;url/api/v1/properties/:id                                          | Delete Property             |
+| PUT &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/properties/:id/photo                 | Upload Photo                |
+|                                                                                 |                             |
+| Apartments                                                                      |                             |
+| POST &nbsp; &nbsp; &nbsp; url/api/v1/properties/propertyId/apartments           | Create Property Apartment   |
+| GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/apartments                           | Get All Apartments          |
+| GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/properties/propertyId/apartments     | Get Apartments For Property |
+| GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/apartments/:id                       | Get Single Apartment        |
+| PUT &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/apartments/:id                       | Update Apartment            |
+| DELETE &nbsp;url/api/v1/apartments/:id                                          | Delete Apartment            |
+| PUT &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/apartments/:id/photo                 | Upload Photo                |
+|                                                                                 |                             |
+| Reviews                                                                         |                             |
+|                                                                                 |                             |
+| Users                                                                           |                             |
