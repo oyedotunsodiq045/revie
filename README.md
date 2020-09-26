@@ -60,6 +60,22 @@ node seeder -d
 | GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/reviews                              | Get All Properties          |
 | GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/properties/:propertyId/reviews       | Get Review For Property     |
 | GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/reviews/:id                          | Get Single Review           |
+| PUT &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/reviews/:id                          | Update Review               |
+| DELETE &nbsp;url/api/v1/reviews/:id                                             | Delete Review               |
 |                                                                                 |                             |
 | Users                                                                           |                             |
 |                                                                                 |                             |
+|                                                                                 |                             |
+| Advanced Filtering                                                              |                             |
+| GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/properties?listings[in]=Duplex       |                             |
+|                                                                                 |                             |
+| Select, Sorting                                                                 |                             |
+| GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/reviews?sort=-rating&select=title    | Sort Review, Descending     |
+| GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/reviews?sort=createdAt&select=title  | Sort Review, Ascending      |
+| GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/properties?select=owner,phone        |                             |
+| GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/properties?sort=-createdAt           |                             |
+|                                                                                 |                             |
+| Pagination                                                                      |                             |
+| GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/properties?page=2&limit=2            |                             |
+| GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/properties?select=owner&page=1       |                             |
+| GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/properties?page=2                    |                             |
