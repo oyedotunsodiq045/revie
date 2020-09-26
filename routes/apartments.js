@@ -9,16 +9,16 @@ const {
 } = require('../controllers/apartments');
 
 const Apartment = require('../models/Apartment');
-const advancedResults = require('../middleware/advancedResults');
-
-const {
-  protect,
-  authorize
-} = require('../middleware/auth');
 
 const router = express.Router({
   mergeParams: true
 });
+
+const advancedResults = require('../middleware/advancedResults');
+const {
+  protect,
+  authorize
+} = require('../middleware/auth');
 
 router
   .route('/:id/photo')

@@ -23,13 +23,17 @@ node seeder -i
 # Delete data from mongodb
 node seeder -d
 ```
+### Instruction
+
+| Note                                                                            |
+| ------------------------------------------------------------------------------- |
+| URL &nbsp; &nbsp; &nbsp; &nbsp; https://revie.glitch.me                         |
+|                                                                                 |
 
 ### Testing
 
 | Routes                                                                          | Description                 |
 | ------------------------------------------------------------------------------- | --------------------------- |
-| URL &nbsp; &nbsp; &nbsp; &nbsp; https://revie.glitch.me                         |                             |
-|                                                                                 |                             |
 | Authentication                                                                  |                             |
 | POST &nbsp; &nbsp; &nbsp; url/api/v1/auth/register                              | Register a user             |
 |                                                                                 |                             |
@@ -43,14 +47,19 @@ node seeder -d
 | PUT &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/properties/:id/photo                 | Upload Photo                |
 |                                                                                 |                             |
 | Apartments                                                                      |                             |
-| POST &nbsp; &nbsp; &nbsp; url/api/v1/properties/propertyId/apartments           | Create Property Apartment   |
+| POST &nbsp; &nbsp; &nbsp; url/api/v1/properties/:propertyId/apartments          | Create Property Apartment   |
 | GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/apartments                           | Get All Apartments          |
-| GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/properties/propertyId/apartments     | Get Apartments For Property |
+| GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/properties/:propertyId/apartments    | Get Apartments For Property |
 | GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/apartments/:id                       | Get Single Apartment        |
 | PUT &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/apartments/:id                       | Update Apartment            |
 | DELETE &nbsp;url/api/v1/apartments/:id                                          | Delete Apartment            |
 | PUT &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/apartments/:id/photo                 | Upload Photo                |
 |                                                                                 |                             |
 | Reviews                                                                         |                             |
+| POST &nbsp; &nbsp; &nbsp; url/api/v1/properties/:propertyId/reviews             | Add Review For Property     |
+| GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/reviews                              | Get All Properties          |
+| GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/properties/:propertyId/reviews       | Get Review For Property     |
+| GET &nbsp; &nbsp; &nbsp; &nbsp; url/api/v1/reviews/:id                          | Get Single Review           |
 |                                                                                 |                             |
 | Users                                                                           |                             |
+|                                                                                 |                             |

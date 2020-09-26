@@ -12,7 +12,7 @@ const connectDB = require('./config/db');
 const properties = require('./routes/properties');
 const apartments = require('./routes/apartments');
 const auth = require('./routes/auth');
-// const reviews = require('./routes/reviews');
+const reviews = require('./routes/reviews');
 
 // Load env vars
 dotenv.config({
@@ -45,7 +45,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/v1/properties', properties);
 app.use('/api/v1/apartments', apartments);
 app.use('/api/v1/auth', auth);
-// app.use('/api/v1/reviews', reviews);
+app.use('/api/v1/reviews', reviews);
 
 app.use(errorHandler);
 

@@ -56,7 +56,7 @@ exports.createApartment = asyncHandler(async (req, res, next) => {
   // Add user to req.body
   req.body.user = req.user.id;
 
-  const property = Property.findById(req.body.property);
+  const property = Property.findById(req.params.propertyId);
 
   if (!property) {
     return next(
@@ -137,7 +137,7 @@ exports.deleteApartment = asyncHandler(async (req, res, next) => {
 });
 
 // @desc    Upload photo for Apartment
-// @route   DELETE /api/v1/apartments/:id/photo
+// @route   PUT /api/v1/apartments/:id/photo
 // @access  Private
 exports.apartmentPhotoUpload = asyncHandler(async (req, res, next) => {
   const apartment = await Apartment.findById(req.params.id);

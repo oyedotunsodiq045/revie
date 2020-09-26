@@ -10,13 +10,14 @@ const {
 } = require('../controllers/properties');
 
 const Property = require('../models/Property');
-const advancedResults = require('../middleware/advancedResults');
 
 // Include other resource routers
 const apartmentRouter = require('./apartments');
+const reviewRouter = require('./reviews');
 
 const router = express.Router();
 
+const advancedResults = require('../middleware/advancedResults');
 const {
   protect,
   authorize
@@ -24,6 +25,7 @@ const {
 
 // Re-route into other resource routers
 router.use('/:propertyId/apartments', apartmentRouter);
+router.use('/:propertyId/reviews', reviewRouter);
 
 router
   .route('/radius/:zipcode/:distance')
