@@ -102,13 +102,7 @@ All of the functionality below has been fully implmented in this project.
 - Use docgen to create HTML files from Postman
 - Add html files as the / route for the api
 
-## Deployment (Digital Ocean)
+## Deployment (Glitch)
 
 - Push to Github
-- Create a droplet - https://m.do.co/c/5424d440c63a
-- Clone repo on to server
-- Use PM2 process manager
-- Enable firewall (ufw) and open needed ports
-- Create an NGINX reverse proxy for port 80
-- Connect a domain name
-- Install an SSL using Let's Encrypt
+- Deployed on https://revie.glitch.me

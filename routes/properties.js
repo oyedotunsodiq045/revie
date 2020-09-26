@@ -17,6 +17,11 @@ const apartmentRouter = require('./apartments');
 
 const router = express.Router();
 
+const {
+  protect,
+  authorize
+} = require('../middleware/auth');
+
 // Re-route into other resource routers
 router.use('/:propertyId/apartments', apartmentRouter);
 
@@ -26,17 +31,17 @@ router
 
 router
   .route('/:id/photo')
-  .put(propertyPhotoUpload);
+  .put(protect, authorize('broker', 'admin'), propertyPhotoUpload);
 
 router
   .route('/')
   .get(advancedResults(Property, 'apartments'), getProperties)
-  .post(createProperty);
+  .post(protect, authorize('broker', 'admin'), createProperty);
 
 router
   .route('/:id')
   .get(getProperty)
-  .put(updateProperty)
-  .delete(deleteProperty);
+  .put(protect, authorize('broker', 'admin'), updateProperty)
+  .delete(protect, authorize('broker', 'admin'), deleteProperty);
 
 module.exports = router;

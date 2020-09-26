@@ -11,13 +11,18 @@ const {
 const Apartment = require('../models/Apartment');
 const advancedResults = require('../middleware/advancedResults');
 
+const {
+  protect,
+  authorize
+} = require('../middleware/auth');
+
 const router = express.Router({
   mergeParams: true
 });
 
 router
   .route('/:id/photo')
-  .put(apartmentPhotoUpload);
+  .put(protect, authorize('broker', 'admin'), apartmentPhotoUpload);
 
 router
   .route('/')
@@ -26,12 +31,12 @@ router
       select: 'owner description phone email location'
     }),
     getApartments)
-  .post(createApartment);
+  .post(protect, authorize('broker', 'admin'), createApartment);
 
 router
   .route('/:id')
   .get(getApartment)
-  .put(updateApartment)
-  .delete(deleteApartment);
+  .put(protect, authorize('broker', 'admin'), updateApartment)
+  .delete(protect, authorize('broker', 'admin'), deleteApartment);
 
 module.exports = router;
