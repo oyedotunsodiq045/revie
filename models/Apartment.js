@@ -84,6 +84,11 @@ const ApartmentSchema = new Schema({
     type: mongoose.Schema.ObjectId,
     ref: 'Property',
     required: true
+  },
+  user: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'User',
+    required: true
   }
 });
 

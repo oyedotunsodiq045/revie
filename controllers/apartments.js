@@ -53,6 +53,8 @@ exports.getApartment = asyncHandler(async (req, res, next) => {
 // @access  Private
 exports.createApartment = asyncHandler(async (req, res, next) => {
   req.body.property = req.params.propertyId;
+  // Add user to req.body
+  req.body.user = req.user.id;
 
   const property = Property.findById(req.body.property);
 
@@ -61,6 +63,14 @@ exports.createApartment = asyncHandler(async (req, res, next) => {
       new ErrorResponse(`Property not found with id of ${req.params.propertyId}`, 404)
     );
   }
+
+  // Make sure user is apartment owner
+  if (property.user.toString() !== req.user.id && req.user.role !== 'admin') {
+    return next(
+      new ErrorResponse(`User ${req.user.id} is not authorized to add an apartment to property ${property._id}`, 401)
+    );
+  }
+
   const apartment = await Apartment.create(req.body);
 
   res.status(201).json({
@@ -78,6 +88,13 @@ exports.updateApartment = asyncHandler(async (req, res, next) => {
   if (!apartment) {
     return next(
       new ErrorResponse(`Apartment not found with id of ${req.params.id}`, 404)
+    );
+  }
+
+  // Make sure user is apartment owner
+  if (apartment.user.toString() !== req.user.id && req.user.role !== 'admin') {
+    return next(
+      new ErrorResponse(`User ${req.user.id} is not authorized to update an apartment to property ${apartment._id}`, 401)
     );
   }
 
@@ -101,6 +118,13 @@ exports.deleteApartment = asyncHandler(async (req, res, next) => {
   if (!apartment) {
     return next(
       new ErrorResponse(`Apartment not found with id of ${req.params.id}`, 404)
+    );
+  }
+
+  // Make sure user is apartment owner
+  if (apartment.user.toString() !== req.user.id && req.user.role !== 'admin') {
+    return next(
+      new ErrorResponse(`User ${req.user.id} is not authorized to delete an apartment ${apartment._id}`, 401)
     );
   }
 
