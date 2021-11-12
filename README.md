@@ -1,7 +1,7 @@
 
 # Revie
 
-> Backend API for the Revie application to manage properties, apartments, reviews, users and authentication. An assessment by Sodiq Oyedotun for iQube Labs.
+> Backend API for the Revie application to manage properties, apartments, reviews, users and authentication. [GitHub Repo](https://github.com/oyedotunsodiq045/revie).
 
 ## Indices
 
